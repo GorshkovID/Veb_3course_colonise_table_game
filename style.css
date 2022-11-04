@@ -1,5 +1,5 @@
 :root{
-    --side: 50px;
+    --side: 200px; /* длина стороны */
     --hex-rotate: 0deg; /* угол наклона шестиугольника относительно центра */
 }
 
@@ -22,6 +22,8 @@
     background: #3e92cc;
     position: relative;
     transform: rotate(var(--hex-rotate));
+    display: flex;
+    justify-content: flex-start;
 }
 
 .hexagon:before, 
@@ -41,4 +43,10 @@
 
 .hexagon:after {
     transform: rotate(-60deg);
+}
+
+.road_top_left {
+    height: calc(var(--side) / 10);
+    width: calc(var(--side));
+    transform: rotate(-30deg);
 }
