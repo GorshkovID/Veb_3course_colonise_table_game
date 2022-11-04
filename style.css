@@ -1,6 +1,5 @@
 :root{
-    --side: 200px; /* длина стороны */
-    --hex-rotate: 0deg; /* угол наклона шестиугольника относительно центра */
+    --side: 100px; /* длина стороны */
 }
 
 .main_field {
@@ -23,4 +22,30 @@
     clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
     display: flex;
     justify-content: flex-start;
+}
+
+.triangle {
+    width: var(--side);
+    height: calc(var(--side) * 1.732 / 2);
+    background-color: blue;
+    clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+}
+
+.square {
+    width: var(--side);
+    height: var(--side);
+    background-color: red;
+}
+
+.village {
+    width: calc(var(--side) / 5);
+    height: calc(var(--side) / 5);
+    clip-path: circle(50% at 50% 50%);
+    background-color: green;
+}
+
+.road {
+    width: var(--side);
+    height: calc(var(--side) / 7);
+    background-color: aqua;
 }
