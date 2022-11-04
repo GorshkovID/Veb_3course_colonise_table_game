@@ -18,7 +18,7 @@
 .hexagon {
     width: calc(var(--side) * 1.732);
     height: calc(var(--side) * 2);
-    background-color: black;
+    background-color: wheat;
     clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
     display: flex;
     justify-content: flex-start;
@@ -48,4 +48,10 @@
     width: var(--side);
     height: calc(var(--side) / 7);
     background-color: aqua;
+}
+
+.h1 {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr var(--side) 1fr;
 }
