@@ -18,35 +18,9 @@
 
 .hexagon {
     width: calc(var(--side) * 1.732);
-    height: var(--side);
-    background: #3e92cc;
-    position: relative;
-    transform: rotate(var(--hex-rotate));
+    height: calc(var(--side) * 2);
+    background-color: black;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
     display: flex;
     justify-content: flex-start;
-}
-
-.hexagon:before, 
-.hexagon:after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: #3e92cc;
-    top: 0;
-    left: 0;
-}
-
-.hexagon:before {
-    transform: rotate(60deg);
-}
-
-.hexagon:after {
-    transform: rotate(-60deg);
-}
-
-.road_top_left {
-    height: calc(var(--side) / 10);
-    width: calc(var(--side));
-    transform: rotate(-30deg);
 }
