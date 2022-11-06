@@ -4,16 +4,14 @@
 
 .main_field {
     width: 100%;
-
     height: 100vh;
-
-    display: grid;
-
-    justify-content: center;
-
-    align-items: center;
+    position: relative;
 }
 
+.hexagon_img {
+    width: 100%;
+    height: 100%;
+}
 
 .hexagon {
     width: calc(var(--side) * 1.732);
@@ -21,7 +19,7 @@
     background-color: wheat;
     clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
 }
 
 .triangle {
@@ -35,6 +33,7 @@
     width: var(--side);
     height: var(--side);
     background-color: red;
+    position: absolute;
 }
 
 .village {
@@ -48,10 +47,4 @@
     width: var(--side);
     height: calc(var(--side) / 7);
     background-color: aqua;
-}
-
-.h1 {
-    display: grid;
-    justify-content: center;
-    grid-template-columns: 1fr var(--side) 1fr;
 }
