@@ -9,8 +9,8 @@ for (let i = 1; i <= 6; i++) {
     let square = document.getElementById("square" + i);
 
     if (i == 1) {
-        square.style.left = (25 * (0.866 - 0.5) + parseInt(hexagon.offsetLeft) + (parseInt(hexagon.offsetWidth) / 2)) + "px";
-        square.style.top = (25 * (-0.5 - 0.866) + parseInt(hexagon.offsetTop) - 1) + "px";
+        square.style.left = (parseInt(square.offsetHeight / 2) * (0.866 - 0.5) + parseInt(hexagon.offsetLeft) + (parseInt(hexagon.offsetWidth) / 2)) + "px";
+        square.style.top = (parseInt(square.offsetHeight / 2) * (-0.5 - 0.866) + parseInt(hexagon.offsetTop)) + "px";
         
         square.style.webkitTransform = "rotate(30deg)";
     }
@@ -19,13 +19,13 @@ for (let i = 1; i <= 6; i++) {
         square.style.top = (parseInt(hexagon.offsetTop) + (parseInt(hexagon.offsetHeight) / 4)) + "px";
     }
     if (i == 3) {
-        square.style.left = (25 * (-0.866 - 0.5) + parseInt(hexagon.offsetLeft) + (parseInt(hexagon.offsetWidth))) + "px";
-        square.style.top = (25 * (-0.5 + 0.866) + parseInt(hexagon.offsetTop) + 0.75 * parseInt(hexagon.offsetHeight)) + "px";
+        square.style.left = (parseInt(square.offsetHeight / 2) * (-0.866 - 0.5) + parseInt(hexagon.offsetLeft) + (parseInt(hexagon.offsetWidth))) + "px";
+        square.style.top = (parseInt(square.offsetHeight / 2) * (-0.5 + 0.866) + parseInt(hexagon.offsetTop) + 0.75 * parseInt(hexagon.offsetHeight)) + "px";
         square.style.webkitTransform = "rotate(150deg)";
     }
     if (i == 4) {
-        square.style.left = (parseInt(hexagon.offsetLeft) + (parseInt(hexagon.offsetWidth) / 2) - 60) + "px";
-        square.style.top = (parseInt(hexagon.offsetTop) + parseInt(hexagon.offsetHeight) - 15) + "px";
+        square.style.left = (parseInt(square.offsetHeight / 2) * (0.866 - 3 * 0.5) + parseInt(hexagon.offsetLeft)) + "px";
+        square.style.top = (parseInt(square.offsetHeight / 2) * (-0.5 + 0.866) + parseInt(hexagon.offsetTop) + 0.75 * parseInt(hexagon.offsetHeight)) + "px";
         square.style.webkitTransform = "rotate(30deg)";
     }
     if (i == 5) {
@@ -33,8 +33,8 @@ for (let i = 1; i <= 6; i++) {
         square.style.top = (parseInt(hexagon.offsetTop) + parseInt(hexagon.offsetHeight) / 4) + "px";
     }
     if (i == 6) {
-        square.style.left = (parseInt(hexagon.offsetLeft) + (parseInt(hexagon.offsetWidth) / 2) - 60) + "px";
-        square.style.top = (parseInt(hexagon.offsetTop) + parseInt(hexagon.offsetHeight) - 135) + "px";
+        square.style.left = (parseInt(square.offsetHeight / 2) * (-0.866 - 3 * 0.5) + parseInt(hexagon.offsetLeft) + (parseInt(hexagon.offsetWidth) / 2)) + "px";
+        square.style.top = (parseInt(square.offsetHeight / 2) * (-0.5 - 0.866) + parseInt(hexagon.offsetTop)) + "px";
         square.style.webkitTransform = "rotate(150deg)";
     }
 }
