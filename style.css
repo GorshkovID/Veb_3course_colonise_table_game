@@ -1,5 +1,5 @@
 :root{
-    --side: 100px; /* длина стороны */
+    --side: 50px; /* длина стороны */
 }
 
 .main_field {
@@ -20,6 +20,9 @@
     clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
     display: flex;
     justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .triangle {
@@ -34,6 +37,8 @@
     height: var(--side);
     background-color: red;
     position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .village {
