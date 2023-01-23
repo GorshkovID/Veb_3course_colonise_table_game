@@ -1,5 +1,17 @@
 // JavaScript source code
-let side = "75px"
+let side = "75px";
+
+const img_num = [];
+
+for (let i = 0; i < 19; i++) {
+    img_num[i] = i + 1;
+}
+
+function shuffle(array) {
+    array.sort(() => Math.random() - 0.5);
+}
+
+shuffle(img_num);
 
 for (let j = 1; j <= 7; j++) {
     let hexagon = document.getElementById("hexagon" + j);
@@ -7,30 +19,51 @@ for (let j = 1; j <= 7; j++) {
     if (j == 1) {
         hexagon.style.left = "44%";
         hexagon.style.top = "44%";
+
+        hexagon.style.backgroundImage = "url('Images/img" + img_num[0] + ".jpg'";
+        img_num.shift();
     }
     if (j == 2) {
         hexagon.style.left = (parseInt(hexagon1.offsetLeft) - parseInt(hexagon1.offsetWidth) + parseInt(hexagon1.offsetHeight)*0.366/2) + "px";
-        hexagon.style.top = (parseInt(hexagon1.offsetTop) - parseInt(hexagon1.offsetHeight) - parseInt(hexagon1.offsetHeight)*0.366/2) + "px";
+        hexagon.style.top = (parseInt(hexagon1.offsetTop) - parseInt(hexagon1.offsetHeight) - parseInt(hexagon1.offsetHeight) * 0.366 / 2) + "px";
+
+        hexagon.style.backgroundImage = "url('Images/img" + img_num[0] + ".jpg'";
+        img_num.shift();
     }
     if (j == 3) {
         hexagon.style.left = (parseInt(hexagon1.offsetLeft) + parseInt(hexagon1.offsetWidth) - parseInt(hexagon1.offsetHeight)*0.366/2) + "px";
-        hexagon.style.top = (parseInt(hexagon1.offsetTop) - parseInt(hexagon1.offsetHeight) - parseInt(hexagon1.offsetHeight)*0.366/2) + "px";
+        hexagon.style.top = (parseInt(hexagon1.offsetTop) - parseInt(hexagon1.offsetHeight) - parseInt(hexagon1.offsetHeight) * 0.366 / 2) + "px";
+
+        hexagon.style.backgroundImage = "url('Images/img" + img_num[0] + ".jpg'";
+        img_num.shift();
     }
     if (j == 4) {
         hexagon.style.left = (parseInt(hexagon1.offsetLeft) - parseInt(hexagon1.offsetWidth) - parseInt(hexagon1.offsetHeight)/2) + "px";
         hexagon.style.top = parseInt(hexagon1.offsetTop) + "px";
+
+        hexagon.style.backgroundImage = "url('Images/img" + img_num[0] + ".jpg'";
+        img_num.shift();
     }
     if (j == 5) {
         hexagon.style.left = (parseInt(hexagon1.offsetLeft) + parseInt(hexagon1.offsetWidth) + parseInt(hexagon1.offsetHeight)/2) + "px";
         hexagon.style.top = parseInt(hexagon1.offsetTop) + "px";
+
+        hexagon.style.backgroundImage = "url('Images/img" + img_num[0] + ".jpg'";
+        img_num.shift();
     }
     if (j == 6) {
         hexagon.style.left = (parseInt(hexagon1.offsetLeft) - parseInt(hexagon1.offsetWidth) + parseInt(hexagon1.offsetHeight)*0.366/2) + "px";
-        hexagon.style.top = (parseInt(hexagon1.offsetTop) + parseInt(hexagon1.offsetHeight) + parseInt(hexagon1.offsetHeight)*0.366/2) + "px";
+        hexagon.style.top = (parseInt(hexagon1.offsetTop) + parseInt(hexagon1.offsetHeight) + parseInt(hexagon1.offsetHeight) * 0.366 / 2) + "px";
+
+        hexagon.style.backgroundImage = "url('Images/img" + img_num[0] + ".jpg'";
+        img_num.shift();
     }
     if (j == 7) {
         hexagon.style.left = (parseInt(hexagon1.offsetLeft) + parseInt(hexagon1.offsetWidth) - parseInt(hexagon1.offsetHeight)*0.366/2) + "px";
-        hexagon.style.top = (parseInt(hexagon1.offsetTop) + parseInt(hexagon1.offsetHeight) + parseInt(hexagon1.offsetHeight)*0.366/2) + "px";
+        hexagon.style.top = (parseInt(hexagon1.offsetTop) + parseInt(hexagon1.offsetHeight) + parseInt(hexagon1.offsetHeight) * 0.366 / 2) + "px";
+
+        hexagon.style.backgroundImage = "url('Images/img" + img_num[0] + ".jpg'";
+        img_num.shift();
     }
 }
 
@@ -42,57 +75,93 @@ for (let i = 1; i <= 12; i++) {
         square.style.left = (parseInt(square.offsetHeight / 2) * (0.866 - 0.5) + parseInt(hexagon1.offsetLeft) + (parseInt(hexagon1.offsetWidth) / 2)) + "px";
         square.style.top = (parseInt(square.offsetHeight / 2) * (-0.5 - 0.866) + parseInt(hexagon1.offsetTop)) + "px";
         square.style.webkitTransform = "rotate(30deg)";
+
+        square.style.backgroundImage = "url('Images/img" + img_num[0] + ".jpg'";
+        img_num.shift();
     }
     if (i == 2) {
         square.style.left = ((parseInt(hexagon1.offsetLeft) + parseInt(hexagon1.offsetWidth))) + "px";
         square.style.top = (parseInt(hexagon1.offsetTop) + (parseInt(hexagon1.offsetHeight) / 4)) + "px";
+
+        square.style.backgroundImage = "url('Images/img" + img_num[0] + ".jpg'";
+        img_num.shift();
     }
     if (i == 3) {
         square.style.left = (parseInt(square.offsetHeight / 2) * (-0.866 - 0.5) + parseInt(hexagon1.offsetLeft) + (parseInt(hexagon1.offsetWidth))) + "px";
         square.style.top = (parseInt(square.offsetHeight / 2) * (-0.5 + 0.866) + parseInt(hexagon1.offsetTop) + 0.75 * parseInt(hexagon1.offsetHeight)) + "px";
         square.style.webkitTransform = "rotate(150deg)";
+
+        square.style.backgroundImage = "url('Images/img" + img_num[0] + ".jpg'";
+        img_num.shift();
     }
     if (i == 4) {
         square.style.left = (parseInt(square.offsetHeight / 2) * (0.866 - 3 * 0.5) + parseInt(hexagon1.offsetLeft)) + "px";
         square.style.top = (parseInt(square.offsetHeight / 2) * (-0.5 + 0.866) + parseInt(hexagon1.offsetTop) + 0.75 * parseInt(hexagon1.offsetHeight)) + "px";
         square.style.webkitTransform = "rotate(30deg)";
+
+        square.style.backgroundImage = "url('Images/img" + img_num[0] + ".jpg'";
+        img_num.shift();
     }
     if (i == 5) {
         square.style.left = (parseInt(hexagon1.offsetLeft) - (parseInt(hexagon1.offsetWidth) / (1.732))) + "px";
         square.style.top = (parseInt(hexagon1.offsetTop) + parseInt(hexagon1.offsetHeight) / 4) + "px";
+
+        square.style.backgroundImage = "url('Images/img" + img_num[0] + ".jpg'";
+        img_num.shift();
     }
     if (i == 6) {
         square.style.left = (parseInt(square.offsetHeight / 2) * (-0.866 - 3 * 0.5) + parseInt(hexagon1.offsetLeft) + (parseInt(hexagon1.offsetWidth) / 2)) + "px";
         square.style.top = (parseInt(square.offsetHeight / 2) * (-0.5 - 0.866) + parseInt(hexagon1.offsetTop)) + "px";
         square.style.webkitTransform = "rotate(150deg)";
+
+        square.style.backgroundImage = "url('Images/img" + img_num[0] + ".jpg'";
+        img_num.shift();
     }
     if (i == 7) {
         square.style.left = ((parseInt(hexagon2.offsetLeft) + parseInt(hexagon2.offsetWidth))) + "px";
         square.style.top = (parseInt(hexagon2.offsetTop) + (parseInt(hexagon2.offsetHeight) / 4)) + "px";
+
+        square.style.backgroundImage = "url('Images/img" + img_num[0] + ".jpg'";
+        img_num.shift();
     }
     if (i == 8) {
         square.style.left = (parseInt(square.offsetHeight / 2) * (-0.866 - 0.5) + parseInt(hexagon3.offsetLeft) + (parseInt(hexagon3.offsetWidth))) + "px";
         square.style.top = (parseInt(square.offsetHeight / 2) * (-0.5 + 0.866) + parseInt(hexagon3.offsetTop) + 0.75 * parseInt(hexagon3.offsetHeight)) + "px";
         square.style.webkitTransform = "rotate(150deg)";
+
+        square.style.backgroundImage = "url('Images/img" + img_num[0] + ".jpg'";
+        img_num.shift();
     }
     if (i == 9) {
         square.style.left = (parseInt(square.offsetHeight / 2) * (0.866 - 3 * 0.5) + parseInt(hexagon5.offsetLeft)) + "px";
         square.style.top = (parseInt(square.offsetHeight / 2) * (-0.5 + 0.866) + parseInt(hexagon5.offsetTop) + 0.75 * parseInt(hexagon5.offsetHeight)) + "px";
         square.style.webkitTransform = "rotate(30deg)";
+
+        square.style.backgroundImage = "url('Images/img" + img_num[0] + ".jpg'";
+        img_num.shift();
     }
     if (i == 10) {
         square.style.left = ((parseInt(hexagon6.offsetLeft) + parseInt(hexagon6.offsetWidth))) + "px";
         square.style.top = (parseInt(hexagon6.offsetTop) + (parseInt(hexagon6.offsetHeight) / 4)) + "px";
+
+        square.style.backgroundImage = "url('Images/img" + img_num[0] + ".jpg'";
+        img_num.shift();
     }
     if (i == 11) {
         square.style.left = (parseInt(square.offsetHeight / 2) * (-0.866 - 0.5) + parseInt(hexagon4.offsetLeft) + (parseInt(hexagon4.offsetWidth))) + "px";
         square.style.top = (parseInt(square.offsetHeight / 2) * (-0.5 + 0.866) + parseInt(hexagon4.offsetTop) + 0.75 * parseInt(hexagon4.offsetHeight)) + "px";
         square.style.webkitTransform = "rotate(150deg)";
+
+        square.style.backgroundImage = "url('Images/img" + img_num[0] + ".jpg'";
+        img_num.shift();
     }
     if (i == 12) {
         square.style.left = (parseInt(square.offsetHeight / 2) * (0.866 - 3 * 0.5) + parseInt(hexagon2.offsetLeft)) + "px";
         square.style.top = (parseInt(square.offsetHeight / 2) * (-0.5 + 0.866) + parseInt(hexagon2.offsetTop) + 0.75 * parseInt(hexagon2.offsetHeight)) + "px";
         square.style.webkitTransform = "rotate(30deg)";
+
+        square.style.backgroundImage = "url('Images/img" + img_num[0] + ".jpg'";
+        img_num.shift();
     }
 }
 
