@@ -7,6 +7,7 @@
     height: 100vh;
     position: relative;
     background-color: wheat;
+    display: flex;
 }
 
 .hexagon_img {
@@ -60,4 +61,63 @@
     position: absolute;
     transform: translate(0%, -50%);
     transform-origin: left center;
+}
+
+.next_move {
+    width: 100px;
+    height: 50px;
+    background-color: green;
+    position: absolute;
+    left: 1300px;
+    top: 600px;
+}
+
+.left_panel {
+    width: 200px;
+    height: 400px;
+    background-color: aqua;
+    position: relative;
+    display: flex;
+}
+
+.main_player {
+    width: 60px;
+    height: 60px;
+    clip-path: circle(50% at 50% 50%);
+    background-color: lightgreen;
+    border-style: none;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    transform: rotate(30 deg);
+    left: 150px;
+    top: 40px;
+    transform-origin: center center;
+}
+
+.player1 {
+    width: 30px;
+    height: 30px;
+    clip-path: circle(50% at 50% 50%);
+    background-color: lightgreen;
+    border-style: none;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    transform: rotate(30 deg);
+    left: 150px;
+    top: 100px;
+    transform-origin: center center;
+}
+
+.player2 {
+    width: 30px;
+    height: 30px;
+    clip-path: circle(50% at 50% 50%);
+    background-color: lightgreen;
+    border-style: none;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    transform: rotate(30 deg);
+    left: 150px;
+    top: 140px;
+    transform-origin: center center;
 }
