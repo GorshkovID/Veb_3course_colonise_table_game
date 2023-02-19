@@ -3,7 +3,7 @@ let side = "75px";
 
 const img_num = [];
 
-for (let i = 0; i < 19; i++) {
+for (let i = 0; i < 18; i++) {
     img_num[i] = i + 1;
 }
 
@@ -20,8 +20,7 @@ for (let j = 1; j <= 7; j++) {
         hexagon.style.left = "44%";
         hexagon.style.top = "44%";
 
-        hexagon.style.backgroundImage = "url('Images/img" + img_num[0] + ".jpg'";
-        img_num.shift();
+        hexagon.style.backgroundImage = "url('Images/img19.jpg'";
     }
     if (j == 2) {
         hexagon.style.left = (parseInt(hexagon1.offsetLeft) - parseInt(hexagon1.offsetWidth) + parseInt(hexagon1.offsetHeight)*0.366/2) + "px";
