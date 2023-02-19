@@ -33,7 +33,3 @@ shuffle(cube2);
 cube.onmouseclick = function () {
     alert(cube1[1] + cube2[1]);
 }
-
-hand.onmouseclick = function () {
-    alert("patron: " )
-}
