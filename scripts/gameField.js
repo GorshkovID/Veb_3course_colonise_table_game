@@ -70,11 +70,13 @@ for (let j = 1; j <= 7; j++) {
 for (let i = 1; i <= 12; i++) {
     // JavaScript source code
     let square = document.getElementById("square" + i);
+    let numField = document.getElementById("num_field" + i);
 
     if (i == 1) {
         square.style.left = (parseInt(square.offsetHeight / 2) * (0.866 - 0.5) + parseInt(hexagon1.offsetLeft) + (parseInt(hexagon1.offsetWidth) / 2)) + "px";
         square.style.top = (parseInt(square.offsetHeight / 2) * (-0.5 - 0.866) + parseInt(hexagon1.offsetTop)) + "px";
         square.style.webkitTransform = "rotate(30deg)";
+        numField.style.webkitTransform = "rotate(-30deg)"
 
         square.style.backgroundImage = "url('Images/img" + img_num[0] + ".jpg'";
         img_num.shift();
@@ -90,6 +92,8 @@ for (let i = 1; i <= 12; i++) {
         square.style.left = (parseInt(square.offsetHeight / 2) * (-0.866 - 0.5) + parseInt(hexagon1.offsetLeft) + (parseInt(hexagon1.offsetWidth))) + "px";
         square.style.top = (parseInt(square.offsetHeight / 2) * (-0.5 + 0.866) + parseInt(hexagon1.offsetTop) + 0.75 * parseInt(hexagon1.offsetHeight)) + "px";
         square.style.webkitTransform = "rotate(150deg)";
+        numField.style.transformOrigin = "20% 25%";
+        numField.style.webkitTransform = "rotate(-150deg)"
 
         square.style.backgroundImage = "url('Images/img" + img_num[0] + ".jpg'";
         img_num.shift();
@@ -98,6 +102,7 @@ for (let i = 1; i <= 12; i++) {
         square.style.left = (parseInt(square.offsetHeight / 2) * (0.866 - 3 * 0.5) + parseInt(hexagon1.offsetLeft)) + "px";
         square.style.top = (parseInt(square.offsetHeight / 2) * (-0.5 + 0.866) + parseInt(hexagon1.offsetTop) + 0.75 * parseInt(hexagon1.offsetHeight)) + "px";
         square.style.webkitTransform = "rotate(30deg)";
+        numField.style.webkitTransform = "rotate(-30deg)"
 
         square.style.backgroundImage = "url('Images/img" + img_num[0] + ".jpg'";
         img_num.shift();
@@ -113,6 +118,8 @@ for (let i = 1; i <= 12; i++) {
         square.style.left = (parseInt(square.offsetHeight / 2) * (-0.866 - 3 * 0.5) + parseInt(hexagon1.offsetLeft) + (parseInt(hexagon1.offsetWidth) / 2)) + "px";
         square.style.top = (parseInt(square.offsetHeight / 2) * (-0.5 - 0.866) + parseInt(hexagon1.offsetTop)) + "px";
         square.style.webkitTransform = "rotate(150deg)";
+        numField.style.transformOrigin = "20% 25%";
+        numField.style.webkitTransform = "rotate(-150deg)"
 
         square.style.backgroundImage = "url('Images/img" + img_num[0] + ".jpg'";
         img_num.shift();
@@ -128,6 +135,8 @@ for (let i = 1; i <= 12; i++) {
         square.style.left = (parseInt(square.offsetHeight / 2) * (-0.866 - 0.5) + parseInt(hexagon3.offsetLeft) + (parseInt(hexagon3.offsetWidth))) + "px";
         square.style.top = (parseInt(square.offsetHeight / 2) * (-0.5 + 0.866) + parseInt(hexagon3.offsetTop) + 0.75 * parseInt(hexagon3.offsetHeight)) + "px";
         square.style.webkitTransform = "rotate(150deg)";
+        numField.style.transformOrigin = "20% 25%";
+        numField.style.webkitTransform = "rotate(-150deg)"
 
         square.style.backgroundImage = "url('Images/img" + img_num[0] + ".jpg'";
         img_num.shift();
@@ -136,6 +145,7 @@ for (let i = 1; i <= 12; i++) {
         square.style.left = (parseInt(square.offsetHeight / 2) * (0.866 - 3 * 0.5) + parseInt(hexagon5.offsetLeft)) + "px";
         square.style.top = (parseInt(square.offsetHeight / 2) * (-0.5 + 0.866) + parseInt(hexagon5.offsetTop) + 0.75 * parseInt(hexagon5.offsetHeight)) + "px";
         square.style.webkitTransform = "rotate(30deg)";
+        numField.style.webkitTransform = "rotate(-30deg)"
 
         square.style.backgroundImage = "url('Images/img" + img_num[0] + ".jpg'";
         img_num.shift();
@@ -151,6 +161,8 @@ for (let i = 1; i <= 12; i++) {
         square.style.left = (parseInt(square.offsetHeight / 2) * (-0.866 - 0.5) + parseInt(hexagon4.offsetLeft) + (parseInt(hexagon4.offsetWidth))) + "px";
         square.style.top = (parseInt(square.offsetHeight / 2) * (-0.5 + 0.866) + parseInt(hexagon4.offsetTop) + 0.75 * parseInt(hexagon4.offsetHeight)) + "px";
         square.style.webkitTransform = "rotate(150deg)";
+        numField.style.transformOrigin = "20% 25%";
+        numField.style.webkitTransform = "rotate(-150deg)"
 
         square.style.backgroundImage = "url('Images/img" + img_num[0] + ".jpg'";
         img_num.shift();
@@ -159,6 +171,7 @@ for (let i = 1; i <= 12; i++) {
         square.style.left = (parseInt(square.offsetHeight / 2) * (0.866 - 3 * 0.5) + parseInt(hexagon2.offsetLeft)) + "px";
         square.style.top = (parseInt(square.offsetHeight / 2) * (-0.5 + 0.866) + parseInt(hexagon2.offsetTop) + 0.75 * parseInt(hexagon2.offsetHeight)) + "px";
         square.style.webkitTransform = "rotate(30deg)";
+        numField.style.webkitTransform = "rotate(-30deg)"
 
         square.style.backgroundImage = "url('Images/img" + img_num[0] + ".jpg'";
         img_num.shift();
