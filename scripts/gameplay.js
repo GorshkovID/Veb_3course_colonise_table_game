@@ -15,11 +15,7 @@ const cube2 = [1, 2, 3, 4, 5, 6];
 
 const move = [1, 2, 3];
 
-player_main.style.backgroundColor = "red";
-
 const circle_num = [];
-
-document.getElementsByClassName().ge
 
 for (let i = 0; i < 12; i++) {
     circle_num[i] = i + 1;
@@ -35,9 +31,9 @@ shuffle(cube1);
 shuffle(cube2);
 
 cube.onmouseclick = function () {
-    alert("")
+    alert(cube1[1] + cube2[1]);
 }
 
 hand.onmouseclick = function () {
-
+    alert("patron: " )
 }
