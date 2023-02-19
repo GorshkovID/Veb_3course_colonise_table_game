@@ -16,7 +16,7 @@ for (let i = 1; i < 13; i++) {
         }
         else {
             num_square.textContent = "";
-            num_square.style.opacity = 1;
+            num_square.style.opacity = "0";
         }
     }
     if (i == 2) {
@@ -25,7 +25,7 @@ for (let i = 1; i < 13; i++) {
         }
         else {
             num_square.textContent = "";
-            num_square.style.opacity = 1;
+            num_square.style.opacity = "0";
         }
     }
     if (i == 3) {
@@ -34,7 +34,7 @@ for (let i = 1; i < 13; i++) {
         }
         else {
             num_square.textContent = "";
-            num_square.style.opacity = 1;
+            num_square.style.opacity = "0";
         }
     }
     if (i == 4) {
@@ -43,7 +43,7 @@ for (let i = 1; i < 13; i++) {
         }
         else {
             num_square.textContent = "";
-            num_square.style.opacity = 1;
+            num_square.style.opacity = "0";
         }
     }
     if (i == 5) {
@@ -52,7 +52,7 @@ for (let i = 1; i < 13; i++) {
         }
         else {
             num_square.textContent = "";
-            num_square.style.opacity = 1;
+            num_square.style.opacity = "0";
         }
     }
     if (i == 6) {
@@ -61,16 +61,17 @@ for (let i = 1; i < 13; i++) {
         }
         else {
             num_square.textContent = "";
-            num_square.style.opacity = 1;
+            num_square.style.opacity = "0";
         }
     }
     if (i == 7) {
         if (square.style.backgroundImage != 'url("Images/img19")') {
             num_square.textContent = num.shift();
-            else {
-                num_square.textContent = "";
-                num_square.style.opacity = 1;
-            }
+        }
+        else {
+            num_square.textContent = "";
+            num_square.style.opacity = "0";
+        } 
         }
     }
     if (i == 8) {
@@ -79,7 +80,7 @@ for (let i = 1; i < 13; i++) {
         }
         else {
             num_square.textContent = "";
-            num_square.style.opacity = 1;
+            num_square.style.opacity = "0";
         }
     }
     if (i == 9) {
@@ -88,7 +89,7 @@ for (let i = 1; i < 13; i++) {
         }
         else {
             num_square.textContent = "";
-            num_square.style.opacity = 1;
+            num_square.style.opacity = "0";
         }
     }
     if (i == 10) {
@@ -97,7 +98,7 @@ for (let i = 1; i < 13; i++) {
         }
         else {
             num_square.textContent = "";
-            num_square.style.opacity = 1;
+            num_square.style.opacity = "0";
         }
     }
     if (i == 11) {
@@ -106,7 +107,7 @@ for (let i = 1; i < 13; i++) {
         }
         else {
             num_square.textContent = "";
-            num_square.style.opacity = 1;
+            num_square.style.opacity = "0";
         }
     }
     if (i == 12) {
@@ -115,7 +116,7 @@ for (let i = 1; i < 13; i++) {
         }
         else {
             num_square.textContent = "";
-            num_square.style.opacity = 1;
+            num_square.style.opacity = "0";
         }
     }
 }
@@ -130,7 +131,7 @@ for (let i = 1; i < 8; i++) {
         }
         else {
             num_hexagon.textContent = "";
-            num_hexagon.style.opacity = 1;
+            num_hexagon.style.opacity = "0";
         }
     }
     if (i == 2) {
@@ -139,7 +140,7 @@ for (let i = 1; i < 8; i++) {
         }
         else {
             num_hexagon.textContent = "";
-            num_hexagon.style.opacity = 1;
+            num_hexagon.style.opacity = "0";
         }
     }
     if (i == 3) {
@@ -148,7 +149,7 @@ for (let i = 1; i < 8; i++) {
         }
         else {
             num_hexagon.textContent = "";
-            num_hexagon.style.opacity = 1;
+            num_hexagon.style.opacity = "0";
         }
     }
     if (i == 4) {
@@ -157,7 +158,7 @@ for (let i = 1; i < 8; i++) {
         }
         else {
             num_hexagon.textContent = "";
-            num_hexagon.style.opacity = 1;
+            num_hexagon.style.opacity = "0";
         }
     }
     if (i == 5) {
@@ -166,7 +167,7 @@ for (let i = 1; i < 8; i++) {
         }
         else {
             num_hexagon.textContent = "";
-            num_hexagon.style.opacity = 1;
+            num_hexagon.style.opacity = "0";
         }
     }
     if (i == 6) {
@@ -175,7 +176,7 @@ for (let i = 1; i < 8; i++) {
         }
         else {
             num_hexagon.textContent = "";
-            num_hexagon.style.opacity = 1;
+            num_hexagon.style.opacity = "0";
         }
     }
     if (i == 7) {
@@ -184,7 +185,7 @@ for (let i = 1; i < 8; i++) {
         }
         else {
             num_hexagon.textContent = "";
-            num_hexagon.style.opacity = 1;
+            num_hexagon.style.opacity = "0";
         }
     }
 }
