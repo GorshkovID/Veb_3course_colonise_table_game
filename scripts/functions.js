@@ -69,6 +69,6 @@ function buildingVillage(move, hand = { patron, filter, mushroom, gas, meat }) {
     }
 }
 
-function point(hand = { patron: 0, filter: 0, mushroom: 0, gas: 0, meat: 0 }) {
+function point(hand = { patron, filter, mushroom, gas, meat }) {
 
 }
