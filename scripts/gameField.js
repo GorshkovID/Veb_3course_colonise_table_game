@@ -7,10 +7,6 @@ for (let i = 0; i < 18; i++) {
     img_num[i] = i + 1;
 }
 
-function shuffle(array) {
-    array.sort(() => Math.random() - 0.5);
-}
-
 shuffle(img_num);
 
 for (let j = 1; j <= 7; j++) {
