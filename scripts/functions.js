@@ -48,6 +48,8 @@ function monsterMove() {
 }
 
 function buildingVillage(move, hand = { patron, filter, mushroom, gas, meat }) {
+    let check_color = document.getElementById("check")
+
     for (i = 1; i <= 42; i++) {
         let village = document.getElementById("village" + i);
 
@@ -55,8 +57,8 @@ function buildingVillage(move, hand = { patron, filter, mushroom, gas, meat }) {
             village.style.scale = "1.5";
         }
 
-        village.onmouseup = function () {
-            if (hand.patron >= 1 && hand.mushroom >= 1 && hand.meat >= 1 && hand.filter >= 1) {
+        village.onclick = function () {
+            if (hand.patron >= 1 && hand.mushroom >= 1 && hand.meat >= 1 && hand.filter >= 1 && village.style.backgroundColor == check_color.style.backgroundColor) {
                 village.style.backgroundColor = move[0];
             }
         }
