@@ -25,7 +25,7 @@ shuffle(cube2);
 cube.onclick = function () {
     alert(cube1[1] + cube2[1]);
 
-    if (flag_cube = true) {
+    if (flag_cube = true && cube1[1] + cube2[1] != 7) {
         point();
     }
 
