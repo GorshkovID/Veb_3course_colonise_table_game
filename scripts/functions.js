@@ -47,8 +47,21 @@ function monsterMove() {
     }
 }
 
+function buildingRoad(move, hand = { patron, filter, mushroom, gas, meat }) {
+    let check_color = document.getElementById("check");
+
+    for (i = 1; i <= 66; i++) {
+        let road = document.getElementById("road_progress" + i);
+
+        road.onclick = function () {
+            if (hand.patron >= 1 && hand.filter >= 1 && hand.gas >= 1) {
+                road.style.backgroundColor = move[0];
+            }
+        }
+    }
+}
+
 function buildingVillage(move, hand = { patron, filter, mushroom, gas, meat }) {
-    let check_color = document.getElementById("check")
 
     for (i = 1; i <= 42; i++) {
         let village = document.getElementById("village" + i);
@@ -113,3 +126,4 @@ function point_hexagon(hand = { patron, filter, mushroom, gas, meat }, cube) {
         }
     }
 }
+

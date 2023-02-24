@@ -52,12 +52,15 @@ hand.onclick = function () {
 
 if (move[0] == "red") {
     buildingVillage(move, hand_1);
+    buildingRoad(move, hand_1)
 }
 if (move[0] == "green") {
     buildingVillage(move, hand_2);
+    buildingRoad(move, hand_2)
 }
 if (move[0] == "blue") {
     buildingVillage(move, hand_3);
+    buildingRoad(move, hand_3)
 }
 
 next_btn.onclick = function () {
