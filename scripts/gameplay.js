@@ -4,7 +4,7 @@ let player_2 = document.getElementById('player2');
 
 let hand = document.getElementsByClassName('hand_btn')[0];
 
-const hand_1 = { patron1: 0, filter1: 0, mushroom1: 0, gas1: 0, meat1: 0 };
+const hand_1 = { patron1: 2, filter1: 2, mushroom1: 2, gas1: 2, meat1: 2 };
 const hand_2 = { patron2: 0, filter2: 0, mushroom2: 0, gas2: 0, meat2: 0 };
 const hand_3 = { patron3: 0, filter3: 0, mushroom3: 0, gas3: 0, meat3: 0 };
 
