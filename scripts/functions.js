@@ -94,7 +94,7 @@ function buildingVillage(main_hand, move, patron, filter, mushroom, gas, meat, c
 
                     village.style.backgroundColor = move;
 
-                    check_village[i] = check_village[i] - 1;
+                    check_village[i] = 1;
 
                     alert(check_village[i])
                 }
