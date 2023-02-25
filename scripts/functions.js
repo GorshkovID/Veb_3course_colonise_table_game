@@ -1,3 +1,12 @@
+let check_village = [];
+let check_road = [];
+
+check_village[0] = "sra";
+
+const hand_1 = [2, 2, 2, 2, 2];
+const hand_2 = [2, 2, 2, 2, 2];
+const hand_3 = [0, 0, 0, 0, 0];
+
 function shuffle(array) {
     array.sort(() => Math.random() - 0.5);
 }
@@ -61,7 +70,7 @@ function buildingRoad(move, hand = { patron, filter, mushroom, gas, meat }) {
     }
 }
 
-function buildingVillage(move, hand = { patron, filter, mushroom, gas, meat }) {
+function buildingVillage(main_hand, move, patron, filter, mushroom, gas, meat, check_village) {
 
     for (i = 1; i <= 42; i++) {
         let village = document.getElementById("village" + i);
@@ -70,15 +79,51 @@ function buildingVillage(move, hand = { patron, filter, mushroom, gas, meat }) {
             village.style.scale = "1.5";
         }
 
-        village.onclick = function () {
-            if (hand.patron >= 1 && hand.mushroom >= 1 && hand.meat >= 1 && hand.filter >= 1 && village.style.backgroundColor == check_color.style.backgroundColor) {
-                village.style.backgroundColor = move[0];
+        if (check_village[i] == 0) {
+            village.onclick = function () {
+                if (patron >= 1 && mushroom >= 1 && meat >= 1 && filter >= 1) {
+                    patron = patron - 1;
+                    mushroom = mushroom - 1;
+                    meat = meat - 1;
+                    filter = filter - 1;
+
+                    main_hand[0] = patron;
+                    main_hand[1] = filter;
+                    main_hand[2] = mushroom;
+                    main_hand[4] = meat;
+
+                    village.style.backgroundColor = move;
+
+                    check_village[i] = check_village[i] - 1;
+
+                    alert(check_village[i])
+                }
             }
         }
 
         village.onmouseleave = function () {
             village.style.scale = "1";
         }
+
+        if (check_village[i] == 1) {
+            village.onclick = function () {
+                if (meat >= 2 && mushroom >= 2 && gas >= 1) {
+                    meat = meat - 2;
+                    gas = gas - 1;
+                    mushroom = mushroom - 2;
+
+                    main_hand[3] = gas;
+                    main_hand[2] = mushroom;
+                    main_hand[4] = meat;
+
+                    village.style.scale = "1.5";
+
+                    check_village[i] = 2;
+                }
+            }
+        }
+
+        
     }
 }
 

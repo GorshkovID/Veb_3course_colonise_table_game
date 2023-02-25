@@ -4,10 +4,6 @@ let player_2 = document.getElementById('player2');
 
 let hand = document.getElementsByClassName('hand_btn')[0];
 
-const hand_1 = { patron1: 2, filter1: 2, mushroom1: 2, gas1: 2, meat1: 2 };
-const hand_2 = { patron2: 0, filter2: 0, mushroom2: 0, gas2: 0, meat2: 0 };
-const hand_3 = { patron3: 0, filter3: 0, mushroom3: 0, gas3: 0, meat3: 0 };
-
 let cube = document.getElementsByClassName('cube_btn')[0];
 
 let flag_cube = true;
@@ -40,7 +36,7 @@ cube.onclick = function () {
 
 hand.onclick = function () {
     if (move[0] == "red") {
-        alert("Patron: " + hand_1.patron1 + "\nFilter: " + hand_1.filter1 + "\nMushroom: " + hand_1.mushroom1 + "\nGas: " + hand_1.gas1 + "\nMeat: " + hand_1.meat1);
+        alert("Patron: " + hand_1[0] + "\nFilter: " + hand_1[1] + "\nMushroom: " + hand_1[2] + "\nGas: " + hand_1[3] + "\nMeat: " + hand_1[4]);
     }
     if (move[0] == "green") {
         alert("Patron: " + hand_2.patron2 + "\nFilter: " + hand_2.filter2 + "\nMushroom: " + hand_2.mushroom2 + "\nGas: " + hand_2.gas2 + "\nMeat: " + hand_2.meat2);
@@ -50,17 +46,15 @@ hand.onclick = function () {
     }
 }
 
-if (move[0] == "red") {
-    buildingVillage(move, hand_1);
-    buildingRoad(move, hand_1)
+if (move[0] == "red") {;
+    buildingVillage(hand_1, move[0], hand_1[0], hand_1[1], hand_1[2], hand_1[3], hand_1[4], check_village);
 }
 if (move[0] == "green") {
-    buildingVillage(move, hand_2);
-    buildingRoad(move, hand_2)
+    buildingVillage(hand_2, move[0], hand_2[0], hand_2[1], hand_2[2], hand_2[3], hand_2[4], check_village);
+
 }
 if (move[0] == "blue") {
-    buildingVillage(move, hand_3);
-    buildingRoad(move, hand_3)
+    buildingVillage(hand_3, move[0], hand_3[0], hand_3[1], hand_3[2], hand_3[3], hand_3[4], check_village);
 }
 
 next_btn.onclick = function () {

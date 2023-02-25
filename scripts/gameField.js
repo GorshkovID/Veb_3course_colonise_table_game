@@ -176,6 +176,8 @@ for (let i = 1; i <= 12; i++) {
 for (let k = 1; k <= 66; k++) {
     let road = document.getElementById("road" + k);
 
+    check_road[k] = 0;
+
     if (k == 1) {
         road.style.left = (parseInt(hexagon2.offsetLeft) + (parseInt(hexagon2.offsetWidth))) + "px";
         road.style.top = (parseInt(hexagon2.offsetTop) + parseInt(hexagon2.offsetHeight) * 0.25) + "px";
@@ -520,7 +522,8 @@ for (let k = 1; k <= 66; k++) {
 
 for (let i = 1; i <= 6; i++) {
     let village = document.getElementById("village" + i);
-    
+
+    check_village[i] = 0;
 
     if (i == 1) {
         village.style.left = (parseInt(hexagon1.offsetLeft) + parseInt(hexagon1.offsetWidth) / 2) + "px";
@@ -550,7 +553,8 @@ for (let i = 1; i <= 6; i++) {
 
 for (let i = 7; i <= 12; i++) {
     let village = document.getElementById("village" + i);
-    
+
+    check_village[i] = 0;
 
     if (i == 7) {
         village.style.left = (parseInt(hexagon2.offsetLeft) + parseInt(hexagon2.offsetWidth) / 2) + "px";
@@ -581,6 +585,7 @@ for (let i = 7; i <= 12; i++) {
 for (let i = 13; i <= 18; i++) {
     let village = document.getElementById("village" + i);
     
+    check_village[i] = 0;
 
     if (i == 13) {
         village.style.left = (parseInt(hexagon3.offsetLeft) + parseInt(hexagon3.offsetWidth) / 2) + "px";
@@ -610,7 +615,8 @@ for (let i = 13; i <= 18; i++) {
 
 for (let i = 19; i <= 24; i++) {
     let village = document.getElementById("village" + i);
-    
+
+    check_village[i] = 0;
 
     if (i == 19) {
         village.style.left = (parseInt(hexagon4.offsetLeft) + parseInt(hexagon4.offsetWidth) / 2) + "px";
@@ -640,7 +646,8 @@ for (let i = 19; i <= 24; i++) {
 
 for (let i = 25; i <= 30; i++) {
     let village = document.getElementById("village" + i);
-    
+
+    check_village[i] = 0;
 
     if (i == 25) {
         village.style.left = (parseInt(hexagon5.offsetLeft) + parseInt(hexagon5.offsetWidth) / 2) + "px";
@@ -670,7 +677,8 @@ for (let i = 25; i <= 30; i++) {
 
 for (let i = 31; i <= 36; i++) {
     let village = document.getElementById("village" + i);
-    
+
+    check_village[i] = 0;
 
     if (i == 31) {
         village.style.left = (parseInt(hexagon6.offsetLeft) + parseInt(hexagon6.offsetWidth) / 2) + "px";
@@ -700,7 +708,8 @@ for (let i = 31; i <= 36; i++) {
 
 for (let i = 37; i <= 42; i++) {
     let village = document.getElementById("village" + i);
-    
+
+    check_village[i] = 0;
 
     if (i == 37) {
         village.style.left = (parseInt(hexagon7.offsetLeft) + parseInt(hexagon7.offsetWidth) / 2) + "px";
