@@ -56,15 +56,26 @@ function monsterMove() {
     }
 }
 
-function buildingRoad(move, hand = { patron, filter, mushroom, gas, meat }) {
-    let check_color = document.getElementById("check");
+function buildingRoad(main_hand, move, patron, filter, mushroom, gas, meat, check_village) {
 
     for (i = 1; i <= 66; i++) {
         let road = document.getElementById("road_progress" + i);
 
-        road.onclick = function () {
-            if (hand.patron >= 1 && hand.filter >= 1 && hand.gas >= 1) {
-                road.style.backgroundColor = move[0];
+        if (check_road[i] == 0) {
+            road.onclick = function () {
+                if (patron >= 1 && filter >= 1 && gas >= 1) {
+                    patron = patron - 1;
+                    filter = filter - 1;
+                    gas = gas - 1;
+
+                    main_hand[0] = patron;
+                    main_hand[1] = filter;
+                    main_hand[3] = gas;
+
+                    road.style.backgroundColor = move[0];
+
+                    check_road[i] = 1;
+                }
             }
         }
     }

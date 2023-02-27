@@ -46,8 +46,10 @@ hand.onclick = function () {
     }
 }
 
-if (move[0] == "red") {;
+if (move[0] == "red") {
+    buildingRoad(hand_1, move[0], hand_1[0], hand_1[1], hand_1[2], hand_1[3], hand_1[4], check_village);
     buildingVillage(hand_1, move[0], hand_1[0], hand_1[1], hand_1[2], hand_1[3], hand_1[4], check_village);
+    
 }
 if (move[0] == "green") {
     buildingVillage(hand_2, move[0], hand_2[0], hand_2[1], hand_2[2], hand_2[3], hand_2[4], check_village);
