@@ -39,24 +39,21 @@ hand.onclick = function () {
         alert("Patron: " + hand_1[0] + "\nFilter: " + hand_1[1] + "\nMushroom: " + hand_1[2] + "\nGas: " + hand_1[3] + "\nMeat: " + hand_1[4]);
     }
     if (move[0] == "green") {
-        alert("Patron: " + hand_2.patron2 + "\nFilter: " + hand_2.filter2 + "\nMushroom: " + hand_2.mushroom2 + "\nGas: " + hand_2.gas2 + "\nMeat: " + hand_2.meat2);
+        alert("Patron: " + hand_2[0] + "\nFilter: " + hand_2[1] + "\nMushroom: " + hand_2[2] + "\nGas: " + hand_2[3] + "\nMeat: " + hand_2[4]);
     }
     if (move[0] == "blue") {
-        alert("Patron: " + hand_3.patron3 + "\nFilter: " + hand_3.filter3 + "\nMushroom: " + hand_3.mushroom3 + "\nGas: " + hand_3.gas3 + "\nMeat: " + hand_3.meat3);
+        alert("Patron: " + hand_3[0] + "\nFilter: " + hand_3[1] + "\nMushroom: " + hand_3[2] + "\nGas: " + hand_3[3] + "\nMeat: " + hand_3[4]);
     }
 }
 
 if (move[0] == "red") {
-    buildingRoad(hand_1, move[0], hand_1[0], hand_1[1], hand_1[2], hand_1[3], hand_1[4], check_village);
-    buildingVillage(hand_1, move[0], hand_1[0], hand_1[1], hand_1[2], hand_1[3], hand_1[4], check_village);
-    
+    building(hand_1, move[0], hand_1[0], hand_1[1], hand_1[2], hand_1[3], hand_1[4], check_village);
 }
 if (move[0] == "green") {
-    buildingVillage(hand_2, move[0], hand_2[0], hand_2[1], hand_2[2], hand_2[3], hand_2[4], check_village);
-
+    building(hand_2, move[0], hand_2[0], hand_2[1], hand_2[2], hand_2[3], hand_2[4], check_village);
 }
 if (move[0] == "blue") {
-    buildingVillage(hand_3, move[0], hand_3[0], hand_3[1], hand_3[2], hand_3[3], hand_3[4], check_village);
+    building(hand_3, move[0], hand_3[0], hand_3[1], hand_3[2], hand_3[3], hand_3[4], check_village);
 }
 
 next_btn.onclick = function () {

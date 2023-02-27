@@ -3,7 +3,7 @@ let check_road = [];
 
 check_village[0] = "sra";
 
-const hand_1 = [2, 2, 2, 2, 2];
+const hand_1 = [4, 4, 4, 4, 4];
 const hand_2 = [2, 2, 2, 2, 2];
 const hand_3 = [0, 0, 0, 0, 0];
 
@@ -56,32 +56,9 @@ function monsterMove() {
     }
 }
 
-function buildingRoad(main_hand, move, patron, filter, mushroom, gas, meat, check_village) {
+function building(main_hand, move, patron, filter, mushroom, gas, meat, check_village) {
 
-    for (i = 1; i <= 66; i++) {
-        let road = document.getElementById("road_progress" + i);
-
-        if (check_road[i] == 0) {
-            road.onclick = function () {
-                if (patron >= 1 && filter >= 1 && gas >= 1) {
-                    patron = patron - 1;
-                    filter = filter - 1;
-                    gas = gas - 1;
-
-                    main_hand[0] = patron;
-                    main_hand[1] = filter;
-                    main_hand[3] = gas;
-
-                    road.style.backgroundColor = move[0];
-
-                    check_road[i] = 1;
-                }
-            }
-        }
-    }
-}
-
-function buildingVillage(main_hand, move, patron, filter, mushroom, gas, meat, check_village) {
+    let flag = true;
 
     for (i = 1; i <= 42; i++) {
         let village = document.getElementById("village" + i);
@@ -107,7 +84,7 @@ function buildingVillage(main_hand, move, patron, filter, mushroom, gas, meat, c
 
                     check_village[i] = 1;
 
-                    alert(check_village[i])
+                    flag = false;
                 }
             }
         }
@@ -130,12 +107,46 @@ function buildingVillage(main_hand, move, patron, filter, mushroom, gas, meat, c
                     village.style.scale = "1.5";
 
                     check_village[i] = 2;
+
+                    flag = false;
                 }
             }
         }
 
-        
+        if (flag == false) {
+            break;
+        }
     }
+
+    /*let flag_road = 0;
+
+    for (j = 1; j <= 66; j++) {
+        let road = document.getElementById("road_progress" + j);
+
+        if (check_road[j] == 0) {
+            road.onclick = function () {
+                if (patron >= 1 && filter >= 1 && gas >= 1) {
+                    patron = patron - 1;
+                    filter = filter - 1;
+                    gas = gas - 1;
+
+                    main_hand[0] = patron;
+                    main_hand[1] = filter;
+                    main_hand[3] = gas;
+
+                    road.style.backgroundColor = move[0];
+
+                    check_road[j] = 1;
+
+                    flag_road = flag_road + 1;
+                }
+            }
+        }
+
+        if (flag_road == 2) {
+            break;
+        }
+    }*/
 }
 
 function point_hexagon(hand = { patron, filter, mushroom, gas, meat }, cube) {
