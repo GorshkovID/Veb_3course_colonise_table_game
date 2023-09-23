@@ -56,11 +56,13 @@ function monsterMove() {
     }
 }
 
-function building(main_hand, move, patron, filter, mushroom, gas, meat, check_village) {
+function buildingVillage(main_hand, move, patron, filter, mushroom, gas, meat, check_village) {
 
-    let flag = true;
+    let flag = 0;
 
     for (i = 1; i <= 42; i++) {
+        check_village[i] = 0;
+
         let village = document.getElementById("village" + i);
 
         village.onmouseenter = function () {
@@ -84,13 +86,15 @@ function building(main_hand, move, patron, filter, mushroom, gas, meat, check_vi
 
                     check_village[i] = 1;
 
-                    flag = false;
+                    flag = flag + 1;
                 }
             }
         }
 
         village.onmouseleave = function () {
             village.style.scale = "1";
+
+            alert(check_village[i]);
         }
 
         if (check_village[i] == 1) {
@@ -108,20 +112,22 @@ function building(main_hand, move, patron, filter, mushroom, gas, meat, check_vi
 
                     check_village[i] = 2;
 
-                    flag = false;
+                    flag = flag + 1;
                 }
             }
         }
 
-        if (flag == false) {
+        if (flag == 2) {
             break;
         }
     }
+}
 
-    /*let flag_road = 0;
+function buildingRoad(main_hand, move, patron, filter, mushroom, gas, meat, check_road) {
+    let flag_road = 0;
 
     for (j = 1; j <= 66; j++) {
-        let road = document.getElementById("road_progress" + j);
+        let road = document.getElementById("road" + j);
 
         if (check_road[j] == 0) {
             road.onclick = function () {
@@ -138,15 +144,15 @@ function building(main_hand, move, patron, filter, mushroom, gas, meat, check_vi
 
                     check_road[j] = 1;
 
-                    flag_road = flag_road + 1;
+                    flag_road = 1;
                 }
             }
         }
 
-        if (flag_road == 2) {
+        if (flag_road == 1) {
             break;
         }
-    }*/
+    }
 }
 
 function point_hexagon(hand = { patron, filter, mushroom, gas, meat }, cube) {
@@ -194,3 +200,20 @@ function point_hexagon(hand = { patron, filter, mushroom, gas, meat }, cube) {
     }
 }
 
+function checkBuilding(move) {
+    if (move == "red") {
+        buildingVillage(hand_1, move, hand_1[0], hand_1[1], hand_1[2], hand_1[3], hand_1[4], check_village);
+
+        buildingRoad(hand_1, move, hand_1[0], hand_1[1], hand_1[2], hand_1[3], hand_1[4], check_road);
+    }
+    if (move == "green") {
+        buildingVillage(hand_2, move, hand_2[0], hand_2[1], hand_2[2], hand_2[3], hand_2[4], check_village);
+
+        buildingRoad(hand_2, move, hand_2[0], hand_2[1], hand_2[2], hand_2[3], hand_2[4], check_road);
+    }
+    if (move == "blue") {
+        buildingVillage(hand_3, move, hand_3[0], hand_3[1], hand_3[2], hand_3[3], hand_3[4], check_village);
+
+        buildingRoad(hand_3, move, hand_3[0], hand_3[1], hand_3[2], hand_3[3], hand_3[4], check_road);
+    }
+}
