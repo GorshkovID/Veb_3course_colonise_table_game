@@ -217,3 +217,17 @@ function checkBuilding(move) {
         buildingRoad(hand_3, move, hand_3[0], hand_3[1], hand_3[2], hand_3[3], hand_3[4], check_road);
     }
 }
+
+function pointSending() {
+    let flag = 0;
+
+    for (i = 1; i <= 42; i++) {
+        if (check_village[i] == 1) {
+            for (j = 1; j <= 7; j++) {
+                let hexagon = document.getElementById("hexagon" + j);
+
+
+            }
+        }
+    }
+}
